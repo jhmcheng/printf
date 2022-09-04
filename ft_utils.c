@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 21:23:37 by jcheng            #+#    #+#             */
-/*   Updated: 2022/08/31 22:36:39 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/04 11:16:27 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void ft_putchar(int c)
+int	ft_putchar(int c)
 {
 	write(1, &c, 1);
+	return (1);
 }
 
-int	main(void)
-{
-	int c = 65;
-	//printf("\n%d\n", ft_putchar(c));
-	//return (0);
-	ft_putchar(c);
-}
+
+
+
+
+
+
+
+
+// int	main(void)
+// {
+// 	int c = 65;
+// 	//printf("\n%d\n", ft_putchar(c));
+// 	//return (0);
+// 	ft_putchar(c);
+// }
