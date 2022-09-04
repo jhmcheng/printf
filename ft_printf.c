@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 20:56:31 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/04 16:26:42 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/04 17:10:45 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ int	printf_specifiers(va_list args, char specifier, int a)
 
 int	main(void)
 {
-	ft_printf("output:%c\n", ft_putchar('c'));
-	ft_printf("output:%d", ft_putstr("dfghjk"));
+	ft_printf("output:%c\n", 'd');
+	//ft_printf("output:%s\n", "dfghjk");
 }

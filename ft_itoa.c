@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:48:36 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/04 16:48:36 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/04 16:58:38 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ char	*ft_itoa(int n)
 	return (result);
 }
 
-int	main(void)
-{
-	int	n = 1456723;
-	printf("output:%s", ft_itoa(n));
-}
+// int	main(void)
+// {
+// 	int	n = 1456723;
+// 	printf("output:%s", ft_itoa(n));
+// }

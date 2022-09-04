@@ -14,7 +14,7 @@ RM		= 	rm -rf
 GCC		=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
 
-NAME	=	fr_printf.a
+NAME	=	ft_printf.a
 
 all		:	$(NAME)
 
