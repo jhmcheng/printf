@@ -1,5 +1,5 @@
 #mandatory
-SRCS	=	ft_printf.c ft_utils.c
+SRCS	=	ft_printf.c ft_utils.c ft_hexa.c ft_pointer.c
 
 OBJS	=	$(SRCS:.c=.o)
 

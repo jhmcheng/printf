@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 20:56:31 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/04 17:10:45 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/10 16:18:15 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,8 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-		{
-			count += printf_specifiers(args, str[i], count);
-			i++;
-		}
+			ft_putchar(str[i]);
+		i++;
 	}
 	va_end(args);
 	return (count);
@@ -47,14 +45,30 @@ int	printf_specifiers(va_list args, char specifier, int a)
 	else if (specifier == 'c')
 		a += ft_putchar(va_arg(args, int));
 	else if (specifier == 's')
-		a += ft_putstr(va_arg(args,char *));
+		a += ft_putstr(va_arg(args, char *));
 	else if (specifier == 'd' || specifier == 'i')
-		a += ft_putnbr_len(va_arg(args, int));
+		a += ft_putnbr(va_arg(args, int));
+	else if (specifier == 'u')
+		a += ft_putnbr_u(va_arg(args, unsigned int));
+	else if (specifier == 'x' || specifier == 'X')
+		a += ft_hexa(va_arg(args, int), specifier);
+	else if (specifier == 'p')
+		a += ft_print_pointer(va_arg(args, unsigned long));
 	return (a);
 }
 
 int	main(void)
 {
-	ft_printf("output:%c\n", 'd');
-	//ft_printf("output:%s\n", "dfghjk");
+	int	a = 10;
+	int	*ptr = &a;
+
+	ft_printf("hello%cworld\n", 48);
+	ft_printf("%s\n", "dfghjk");
+	ft_printf("%i\n", 'i');
+	ft_printf("%u\n", -20);
+	ft_printf("%x\n", 479);
+	ft_printf("%X\n", 0);
+	ft_printf("%%\n");
+	ft_printf("%p\n", ptr);
+	printf("%p", ptr);
 }

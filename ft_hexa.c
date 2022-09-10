@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_hexa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 12:50:43 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/10 16:19:35 by jcheng           ###   ########.fr       */
+/*   Created: 2022/09/10 14:33:30 by jcheng            #+#    #+#             */
+/*   Updated: 2022/09/10 15:19:12 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
+#include <stdio.h>
+#include <unistd.h>
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <limits.h>
-# include <stdlib.h>
-# include <stdio.h>
+int	ft_hexa(unsigned int n, char format)
+{
+	int	a;
 
-int		ft_putchar(int c);
-int		ft_putstr(char *str);
-int		ft_putnbr(int n);
-int		ft_putnbr_u(unsigned int n);
-int		ft_hexa(unsigned int u, char format);
-int		ft_print_pointer(unsigned long n);
-
-#endif
+	a = 0;
+	if (n >= 16)
+	{
+		a += ft_hexa((n / 16), format);
+		a += ft_hexa((n % 16), format);
+	}
+	else
+	{
+		if (n <= 9)
+			ft_putchar(n + 48);
+		else
+		{
+			if (format == 'x')
+				ft_putchar(n - 10 + 'a');
+			if (format == 'X')
+				ft_putchar(n - 10 + 'A');
+		}
+	}
+	return (a);
+}
