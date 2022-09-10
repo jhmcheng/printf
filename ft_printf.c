@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 20:56:31 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/10 16:18:15 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/10 16:52:57 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,18 +57,18 @@ int	printf_specifiers(va_list args, char specifier, int a)
 	return (a);
 }
 
-int	main(void)
-{
-	int	a = 10;
-	int	*ptr = &a;
+// int	main(void)
+// {
+// 	int	a = 10;
+// 	int	*ptr = &a;
 
-	ft_printf("hello%cworld\n", 48);
-	ft_printf("%s\n", "dfghjk");
-	ft_printf("%i\n", 'i');
-	ft_printf("%u\n", -20);
-	ft_printf("%x\n", 479);
-	ft_printf("%X\n", 0);
-	ft_printf("%%\n");
-	ft_printf("%p\n", ptr);
-	printf("%p", ptr);
-}
+// 	ft_printf("hello%cworld\n", 48);
+// 	ft_printf("%s\n", "dfghjk");
+// 	ft_printf("%i\n", 'i');
+// 	ft_printf("%u\n", -20);
+// 	ft_printf("%x\n", 479);
+// 	ft_printf("%X\n", 0);
+// 	ft_printf("%%\n");
+// 	ft_printf("%p\n", ptr);
+// 	printf("%p", ptr);
+// }

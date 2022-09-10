@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:50:43 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/10 16:19:35 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/10 16:51:54 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 
+int		ft_printf(const char *str, ...);
 int		ft_putchar(int c);
 int		ft_putstr(char *str);
 int		ft_putnbr(int n);
