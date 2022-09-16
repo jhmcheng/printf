@@ -19,6 +19,13 @@ $(NAME)	:	$(OBJS)
 # %.o	:	%.c
 # 	$(GCC) $(CFLAGS) -I. -c $< -o $@
 
+test:
+	@$(GCC) $(CFLAGS) $(SRCS) -o test.out && ./test.out
+	@$(RM) ./test.out
+
+norm: 
+	norminette -R CheckForbiddenSourceError $(SRCS)
+
 #remove files
 clean:
 	$(RM) $(OBJS)

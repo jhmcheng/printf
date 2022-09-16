@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 21:23:37 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/10 16:53:03 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/16 15:31:48 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,24 @@ int	ft_putchar(int c)
 int	ft_putstr(char *str)
 {
 	int	i;
+	int	a;
 
 	i = 0;
+	a = 0;
 	if (str == NULL)
 	{
-		i += ft_putstr("(null)");
-		str++;
+		a += ft_putstr("(null)");
+		i++;
 	}
-	while (str[i])
+	else
 	{
-		i += ft_putchar(str[i]);
+		while (str[i] != '\0')
+		{
+			a += ft_putchar(str[i]);
+			i++;
+		}
 	}
-	return (i);
+	return (a);
 }
 
 int	ft_putnbr(int n)
@@ -80,9 +86,10 @@ int	ft_putnbr_u(unsigned int n)
 
 // int	main(void)
 // {
-// 	ft_putnbr_u(-20);
+// 	printf("%c small string", 'a');
+// 	// ft_putnbr_u(-20);
 // 	// printf("output:%d\n", ft_putnbr(534567));
-	
+
 // 	// char *str = NULL;
 // 	// printf("output:%s", str);
 // }

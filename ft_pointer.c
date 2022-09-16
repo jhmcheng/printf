@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 15:19:27 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/10 16:19:15 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/16 14:51:28 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ int	ft_pointer(uintptr_t n)
 	else
 	{
 		if (n <= 9)
-			ft_putchar(n + 48);
+			a += ft_putchar(n + 48);
 		else
-			ft_putchar(n - 10 + 'a');
+			a += ft_putchar(n - 10 + 'a');
 	}
 	return (a);
 }
 
-int	ft_print_pointer(unsigned long num)
+int	ft_print_pointer(unsigned long long num)
 {
 	int	i;
 

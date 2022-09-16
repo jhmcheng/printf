@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:50:43 by jcheng            #+#    #+#             */
-/*   Updated: 2022/09/10 16:51:54 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/09/16 14:41:52 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_putchar(int c);
 int		ft_putstr(char *str);
 int		ft_putnbr(int n);
 int		ft_putnbr_u(unsigned int n);
-int		ft_hexa(unsigned int u, char format);
-int		ft_print_pointer(unsigned long n);
+int		ft_hexa(unsigned int u, char specifier);
+int		ft_print_pointer(unsigned long long n);
 
 #endif
