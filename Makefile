@@ -24,7 +24,7 @@ test:
 	@$(RM) ./test.out
 
 norm: 
-	norminette -R CheckForbiddenSourceError $(SRCS)
+	norminette -R CheckForbiddenSourceError $(SRCS) ft_printf.h
 
 #remove files
 clean:
